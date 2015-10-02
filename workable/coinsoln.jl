@@ -43,7 +43,7 @@ end
 
 function getMeSomeMLE(procdata, theta)
   optimize(loglik, theta, show_trace=true, autodiff=true,
-            method = :l_bfgs, ftol = 1e-15, iterations=5000)
+            method = :cg, ftol = 1e-12, iterations=5000)
 end
 
 # read in and process the data
